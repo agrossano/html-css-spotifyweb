@@ -1,0 +1,96 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+/* NAV */
+
+nav {
+  top:0;
+  position: fixed;
+  display: flex;
+  background: black;
+  width: 230px;
+  height: 100%;
+  display: flex;
+}
+
+
+
+/* PARTE CENTRALE */
+
+#main-view {
+  margin-left: 230px;
+  width: calc(100% - 230px)
+}
+
+/* barra superiore fissa */
+
+#upgrade {
+  top:0;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background-color: black;
+  opacity: 0.8;
+  z-index: 3;
+}
+
+/* centrale scorrevole */
+
+#main-content {
+  margin-top: 100px;
+  display: flex;
+  /* height: 100vh; */
+  z-index: 999;
+  background-color: #141922;
+  padding-bottom: 400px;
+}
+
+.menu-main {
+  width: 100%;
+  display: inline-block;
+}
+
+.menu-main li{
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+}
+
+.recently-played, .creatoper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.cover {
+  width: calc(100% / 6);
+}
+
+.cover img {
+  max-width: 100%;
+}
+/* player basso fisso */
+
+#player {
+  bottom: 0;
+  position: fixed;
+  display: flex;
+  width: 100%;
+  height: 100px;
+  background: black;
+  z-index: 1;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.boxfiltro {
+  flex: 0 0 100%;
+}
