@@ -27,12 +27,15 @@ body {
   padding: 20px;
 }
 
+.logo-small {
+  display: none;
+}
+
 .logo img {
   width: 70%;
 }
 
 .main-nav {
-  padding: 0 20px;
   font-size: 13px;
 }
 
@@ -44,21 +47,23 @@ body {
 
 .main-nav li {
   padding-top: 10px;
+  padding-left: 20px;
 }
 
-.main-nav li a {
-  padding:1px;
-}
 
 .main-nav li:first-child a {
   color: #fff;
+  vertical-align: middle;
+}
+
+.main-nav li:first-child {
+  border-left: 3px solid #adff2f;
+  padding-left: 16px;
 }
 
 .main-nav li a:hover {
   color: #fff;
 }
-
-
 
 .playlist-nav {
   padding: 20px;
@@ -71,20 +76,39 @@ body {
   font-size: 14px;
 }
 
+.crea-playlist {
+  margin-top: 10px;
+}
+
+.crea-playlist #plus:hover {
+  background: #fff;
+  cursor: pointer;
+}
+
+.crea-playlist #crea:hover {
+  color: #fff;
+  cursor: pointer;
+}
+
 .playlist-nav #crea {
   color: #fff;
   font-size: 14px;
   color: rgba(255, 255, 255, 0.4);
 }
 
-.playlist-nav plus {
-  color:white;
+.playlist-nav #plus {
+  font-size: 35px;
+  padding: 0 10px;
+  margin-right: 10px;
+  color: #000;
 
+  background-color: rgba(255, 255, 255, 0.6);
+  vertical-align: middle;
 }
 
 .playlist-nav li {
   font-size:13px;
-  padding-top: 10px;
+  padding-top: 17px;
 }
 
 .playlist-nav li a:hover {
@@ -95,7 +119,6 @@ body {
 
 }
 
-
 .nav-bottom {
   margin: 20px;
   color: #fff;
@@ -103,6 +126,10 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   height: 177px;;
+}
+
+.nav-bottom a:hover {
+  color: #fff;
 }
 
 .nav-bottom img {
@@ -299,9 +326,24 @@ a {
 }
 
 .dati-traccia #artist {
-  font-size: 13px;
+  font-size: 12px;
   color: #fff;
   font-weight: 600;
+}
+
+.dati-traccia #artist {
+  font-size: 12px;
+  color: #fff;
+  font-weight: 600;
+}
+
+.dati-traccia #artist:hover {
+  text-decoration: underline;
+}
+
+.dati-traccia #track-name:hover {
+  text-decoration: underline;
+  color: #fff;
 }
 
 .dati-traccia #track-name {
@@ -319,12 +361,16 @@ a {
   margin-left:15px;
 }
 
+.player-icon a i:hover {
+  color: #fff;
+}
+
 .cover-player {
   display: flex;
   flex-direction: column;
   justify-content:center;
   margin-left:13px;
-  width: 16%;
+  width: 43px;
 }
 
 .player-left img {
@@ -345,14 +391,19 @@ a {
   align-items: center;
   color: #fff;
   font-size: 17px;
+
 }
 
 .player-icons i {
-  padding: 10px;
+  padding: 10px 13px;
 }
 
 .player-icons i:nth-child(3) {
   font-size: 30px;
+}
+
+.player-icons i:nth-child(3):hover {
+  transform: scale(1.06);
 }
 
 .player-bar {
@@ -376,6 +427,36 @@ a {
   cursor: pointer;
 }
 
+.actual-progress {
+  position: relative;
+  width: 50%;
+  height: 4px;
+  border-radius: 4px;
+  background-color: #fff;
+  opacity: 0.7;
+}
+
+.progress-bar:hover .actual-progress, .volume-bar:hover .actual-progress {
+  background-color: #adff2f;
+  opacity: 1;
+}
+
+.point {
+  display: none;
+  position: absolute;
+  bottom:-5px;
+  right: 0;
+  width: 13px;
+  height: 13px;
+  background-color: #fff;
+  border-radius: 100%;
+}
+
+.progress-bar:hover .point,
+.volume-bar:hover .point {
+  display: inline-block;
+}
+
 .player-right {
   display: flex;
   width: 240px;
@@ -392,6 +473,7 @@ a {
 }
 
 .volume-bar {
+  position: relative;
   width: 50%;
   height: 4px;
   border-radius: 4px;
@@ -408,4 +490,66 @@ a {
   margin-bottom: 20px;
   flex: 0 0 100%;
   color: #fff;
+}
+
+@media screen and (max-width: 1100px) {
+  .cover {
+    flex-basis: calc(100% / 4 - 15px);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .cover {
+    flex-basis: calc(100% / 2 - 15px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+ .nav {
+   width: 50px;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+ }
+
+ #main-view {
+    margin-left: 50px;
+  }
+
+  #upgrade {
+  width: calc(100% - 50px);
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .logo-small {
+    display: inline-block;
+  }
+
+  .main-nav {
+    padding: 9px 13px;
+    font-size: 13px;
+}
+
+  .main-nav li a {
+    display: none;
+  }
+
+  .playlist-nav {
+    display: none;
+  }
+
+  .download-app {
+    border-bottom: 0;
+  }
+
+  .download-app a {
+    display: none;
+ }
+
+ .user span {
+    display: none;
+ }
 }
