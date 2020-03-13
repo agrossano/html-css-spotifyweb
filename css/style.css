@@ -5,22 +5,28 @@
 }
 
 body {
-  font-family: 'Montserrat'
+  font-family: 'Montserrat';
+
+}
+
+
+
+
+#main {
+  overflow-y:auto;
+  height: calc(100vh - 90px);
 }
 
 
 /* NAV */
 
 .nav {
-  top:0;
   position: fixed;
-  display: flex;
   background: #000;
   width: 230px;
   height: calc(100% - 90px);
   display: flex;
   flex-direction: column;
-
 }
 
 .logo {
@@ -49,7 +55,6 @@ body {
   padding-top: 10px;
   padding-left: 20px;
 }
-
 
 .main-nav li:first-child a {
   color: #fff;
@@ -101,7 +106,6 @@ body {
   padding: 0 10px;
   margin-right: 10px;
   color: #000;
-
   background-color: rgba(255, 255, 255, 0.6);
   vertical-align: middle;
 }
@@ -115,10 +119,6 @@ body {
   color: #fff;
 }
 
-.playlist-nav ul {
-
-}
-
 .nav-bottom {
   margin: 20px;
   color: #fff;
@@ -126,6 +126,7 @@ body {
   flex-direction: column;
   justify-content: flex-end;
   height: 177px;;
+
 }
 
 .nav-bottom a:hover {
@@ -147,10 +148,6 @@ body {
   padding-left: 4px;
 }
 
-.user img {
-
-}
-
 .user {
   font-size:15px;
   font-weight: 600;
@@ -167,19 +164,17 @@ body {
   margin-left: 230px;
 }
 
+
 /* barra superiore fissa */
 
 #upgrade {
-  top:0;
   position: fixed;
   display: flex;
   justify-content: flex-end;
-  text-align: right;
   width: calc(100% - 230px);
   height: 90px;
   background-color: rgba(0, 0, 0, 0.4);
   padding: 20px;
-  z-index: 3;
 }
 
 #upgrade a {
@@ -302,13 +297,13 @@ a {
 /* player basso fisso */
 #player {
   bottom: 0;
+  left: 0;
   position: fixed;
   display: flex;
   justify-content: space-between;
   width: 100%;
   height: 90px;
   background: #282828;
-  z-index: 5;
 }
 
 
@@ -472,6 +467,12 @@ a {
   justify-content: space-between;
 }
 
+.options-icon {
+  display: flex;
+  flex-basis: 50%;
+  justify-content: space-around;
+}
+
 .volume-bar {
   position: relative;
   width: 50%;
@@ -512,6 +513,7 @@ a {
    justify-content: space-between;
  }
 
+
  #main-view {
     margin-left: 50px;
   }
@@ -528,9 +530,19 @@ a {
     display: inline-block;
   }
 
-  .main-nav {
+ .main-nav {
     padding: 9px 13px;
     font-size: 13px;
+}
+
+ .main-nav li {
+    padding-top: 10px;
+    padding-left: 0;
+}
+
+ .main-nav li:first-child {
+   border-left: 0;
+   padding-left: 0px;
 }
 
   .main-nav li a {
@@ -547,6 +559,48 @@ a {
 
   .download-app a {
     display: none;
+ }
+
+ .player-left {
+   flex-direction: column;
+   align-items:center;
+   width: 170px;
+ }
+
+ .cover-player {
+   margin-left: 10px;
+ }
+
+ .dati-traccia {
+   text-align: center;
+ }
+
+ .player-right {
+   width: 115px;
+ }
+
+ .player-icon {
+   width: 7%;
+   display: flex;
+   margin-right: 35px;
+ }
+
+ .player-options {
+   flex-direction: column;
+   justify-content: center;
+ }
+
+ .player-icons {
+   font-size: 13px;
+ }
+
+ .player-icons i:nth-child(3) {
+  font-size: 25px;
+}
+ .options-icon {
+   margin-bottom: 3px;
+   width: 80px;
+   font-size: 14px;
  }
 
  .user span {
