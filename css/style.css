@@ -175,6 +175,7 @@ body {
   height: 90px;
   background-color: rgba(0, 0, 0, 0.4);
   padding: 20px;
+  z-index: 999;
 }
 
 #upgrade a {
@@ -309,7 +310,6 @@ a {
 
 .player-left {
   display: flex;
-  flex-direction: row;
   width: 254px;
 }
 
@@ -349,7 +349,7 @@ a {
   display: flex;
   justify-content:center;
   align-items:center;
-  margin-left:25px;
+  margin-left:18px;
 }
 
 .player-icon a {
@@ -499,13 +499,13 @@ a {
   }
 }
 
-@media screen and (max-width: 700px) {
+/* @media screen and (max-width: 700px) {
   .cover {
     flex-basis: calc(100% / 2 - 15px);
   }
-}
+} */
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
  .nav {
    width: 50px;
    display: flex;
@@ -522,6 +522,9 @@ a {
   width: calc(100% - 50px);
   }
 
+  .cover {
+    flex-basis: calc(100% / 2 - 15px);
+}
   .logo {
     display: none;
   }
@@ -562,17 +565,12 @@ a {
  }
 
  .player-left {
-   flex-direction: column;
    align-items:center;
    width: 170px;
  }
 
  .cover-player {
    margin-left: 10px;
- }
-
- .dati-traccia {
-   text-align: center;
  }
 
  .player-right {
@@ -588,10 +586,16 @@ a {
  .player-options {
    flex-direction: column;
    justify-content: center;
+
  }
 
  .player-icons {
    font-size: 13px;
+   width: 90%
+ }
+
+ .player-bar {
+   width: 90%;
  }
 
  .player-icons i:nth-child(3) {
